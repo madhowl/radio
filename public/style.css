@@ -1,0 +1,51 @@
+body {
+    font-family: 'Russo One', sans-serif;
+}
+
+.nav-link {
+    color: black;
+
+}
+.nav-item{
+    border-bottom: 2px solid white;
+}
+
+.nav-item:hover{
+    border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+    color: black;
+    border-bottom: 2px solid white;
+}
+
+.txt-footer {
+    color: black;
+    font-size: 15px;
+}
+
+footer {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.navbar {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.footer-down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 87px;
+}
+
+.wow {
+    visibility: hidden;
+}
+
+.
