@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/main', 'MainController@index1');
 Route::get('/pop', 'MainController@index2');
 Route::get('/russia', 'MainController@index3');
-Route::get('/login', 'MainController@index4');
+//Route::get('/login', 'MainController@index4');
 Route::get('/register', 'MainController@index5');
 Route::get('/about', 'MainController@index6');
 Route::get('/contact', 'MainController@index7');
@@ -27,10 +27,18 @@ Route::get('/genres/{id}', 'MainController@showRadiosFromGenre');
 
 Auth::routes(['verify' => true]);
 
-Route::get('/admin', 'HomeController@index')->middleware('verified');
+Route::get('admin', 'RadioController@index')->middleware('verified');
+
+Route::prefix('admin')->group(function () {
+
+
+Route::get('/', 'RadioController@index');
+
 
 Route::resource('radios', 'RadioController');
 
 Route::resource('categories', 'CategoryController');
 
 Route::resource('countries', 'CountryController');
+});
+
