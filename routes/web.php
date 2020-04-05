@@ -24,6 +24,7 @@ Route::get('/register', 'MainController@index5');
 Route::get('/about', 'MainController@index6');
 Route::get('/contact', 'MainController@index7');
 Route::get('/genres/{id}', 'MainController@showRadiosFromGenre');
+Route::get('/radio/{id}', 'MainController@showRadiosFromGenre');
 
 Auth::routes(['verify' => true]);
 
@@ -33,7 +34,6 @@ Route::prefix('admin')->group(function () {
 
 
 Route::get('/', 'RadioController@index');
-
 
 Route::resource('radios', 'RadioController');
 

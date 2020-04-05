@@ -28,6 +28,8 @@ class MainController extends Controller
 
     }
 
+
+
     public function index3(){
         return view('./countries/russia');
     }

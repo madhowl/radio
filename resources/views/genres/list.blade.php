@@ -3,16 +3,17 @@
 @section('title', 'Pop')
 
 @section('content')
-    <div class="row">
-      <table>
-          <th>Название жанра</th>
+        <div class="list">
+            <table>
+                <th>Название жанра</th>
 
-          @foreach( $categories as $category)
-              <tr>
-              <td><a href="/genres/{{$category->id}}">{{$category->title}}</a></td>
-          </tr>
-          @endforeach
-      </table>
+                @foreach( $categories as $category)
+                    <tr>
+                        <td><a href="/genres/{{$category->id}}">{{$category->title}}</a></td>
+                    </tr>
+                @endforeach
+            </table>
+        </div>
       <div class="col-sm-2">
       <!-- Card -->
           <div class="card">
@@ -37,5 +38,5 @@
 </div>
 </div>
 <!-- Card -->
-    </div>
+
 @endsection
