@@ -1,9 +1,9 @@
 @extends('layouts.site')
 
-@section('title', 'Pop')
+@section('title', 'Radios')
 
 @section('content')
-        @foreach( $radios as $radio)
+    @foreach( $radios as $radio)
         <div class="col-sm-2">
             <!-- Card -->
             <div class="card">
@@ -28,5 +28,5 @@
             </div>
         </div>
         <!-- Card -->
-        @endforeach
+    @endforeach
 @endsection

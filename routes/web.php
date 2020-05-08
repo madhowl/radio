@@ -17,14 +17,21 @@ Route::get('/', function () {
 
 
 Route::get('/main', 'MainController@index1');
-Route::get('/pop', 'MainController@index2');
-Route::get('/russia', 'MainController@index3');
+
+Route::get('/genres', 'MainController@categories');
+Route::prefix('genres')->group(function (){
+    Route::get('/{id}', 'MainController@showRadiosFromGenre');
+});
+
+Route::get('/countries', 'MainController@countries');
+Route::prefix('countries')->group(function (){
+    Route::get('/{id}', 'MainController@showRadiosFromCountries');
+});
 //Route::get('/login', 'MainController@index4');
 Route::get('/register', 'MainController@index5');
 Route::get('/about', 'MainController@index6');
 Route::get('/contact', 'MainController@index7');
-Route::get('/genres/{id}', 'MainController@showRadiosFromGenre');
-Route::get('/radio/{id}', 'MainController@showRadiosFromGenre');
+//Route::get('/radio/{id}', 'MainController@showRadiosFromGenre');
 
 Auth::routes(['verify' => true]);
 

@@ -35,43 +35,15 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-{{--                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="/genres">Жанры
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>--}}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">Жарны
+                    <a class="nav-link waves-effect" href="/countries">Страны
+                        <span class="sr-only">(current)</span>
                     </a>
-                    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item waves-effect" href="/pop">Поп</a>
-                        <a class="dropdown-item waves-effect" href="#">Рок</a>
-                        <a class="dropdown-item waves-effect" href="#">Метал</a>
-                        <a class="dropdown-item waves-effect" href="#">Реп</a>
-                        <a class="dropdown-item waves-effect" href="#">Хип-хоп</a>
-                        <a class="dropdown-item waves-effect" href="#">Джаз</a>
-                        <a class="dropdown-item waves-effect" href="#">Блюз</a>
-                        <a class="dropdown-item waves-effect" href="#">Электронная музыка</a>
-                        <a class="dropdown-item waves-effect" href="#">Шансон</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">Страны
-                    </a>
-                    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item waves-effect" href="/russia">Россия</a>
-                        <a class="dropdown-item waves-effect" href="#">Украина</a>
-                        <a class="dropdown-item waves-effect" href="#">Белорусь</a>
-                        <a class="dropdown-item waves-effect" href="#">США</a>
-                        <a class="dropdown-item waves-effect" href="#">Казахстан</a>
-                        <a class="dropdown-item waves-effect" href="#">Польша</a>
-                        <a class="dropdown-item waves-effect" href="#">Германия</a>
-                        <a class="dropdown-item waves-effect" href="#">Япония</a>
-                        <a class="dropdown-item waves-effect" href="#">Китай</a>
-                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link waves-effect" href="/about">О нас</a>

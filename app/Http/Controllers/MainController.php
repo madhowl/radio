@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Radio;
+use App\Models\Country;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -16,16 +17,25 @@ class MainController extends Controller
         return view('main');
     }
 
-    public function index2(){
+    public function categories(){
         $categories = Category::all('id','title');
 //        dd($categories);
-        return view('genres.list')->with('categories',$categories);
+        return view('genres.genres')->with('categories',$categories);
+    }
+    public function countries(){
+        $countries = Country::all('id','title');
+//        dd($countries);
+        return view('countries.countries')->with('countries',$countries);
     }
     public function showRadiosFromGenre($id)
     {
         $radios = Radio::where('categories_id', $id)->get();
-        return view('genres.from-id')->with('radios',$radios);
-
+        return view('genres.from-genres')->with('radios',$radios);
+    }
+    public function showRadiosFromCountries($id)
+    {
+        $radios = Radio::where('countries_id', $id)->get();
+        return view('countries.from-countries')->with('radios',$radios);
     }
 
 
