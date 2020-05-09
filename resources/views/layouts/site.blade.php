@@ -15,8 +15,8 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="audio.css" media="screen">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/audio.css" media="screen" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -96,8 +96,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
 
 <script>var _gaq=[['_setAccount','UA-20257902-1'],['_trackPageview']];(function(d,t){ var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; g.async=1;g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
-<script src="audio.min.js"></script>
-
+<script src="/js/audio.min.js"></script>
 <script>
     audiojs.events.ready(function() {
         audiojs.createAll();
