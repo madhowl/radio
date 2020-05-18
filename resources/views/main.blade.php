@@ -3,18 +3,33 @@
 @section('title', 'Главная')
 
 @section('content')
-    <div class="col-sm-2">
-        <!-- Card -->
-        <div class="card navcolor navtext">
+    <div class="container">
+        <div class="row">
+    @foreach( $radios as $radio)
+        <div class="col-sm-2">
+            <!-- Card -->
+            <div class="card">
+                <!-- Card image -->
+                <div class="view overlay">
+                    <img class="card-img-top wow fadeInUp" src="{{ $radio->image }}"
+                         alt="{{ $radio->title }}">
+                    <a href="/radio/{{ $radio->id }}">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
 
-            <!-- Card image -->
-            <div class="view overlay">
-                <img class="card-img-top wow fadeInUp" data-wow-delay="0.6s" src="https://www.meme-arsenal.com/memes/409d333baf9cc0898c983cc4c866d88d.jpg" alt="Card image cap">
-                <a href="#!" data-toggle="modal" data-target="#exampleModalCenter">
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
+                <!-- Card content -->
+                <div class="card-body">
+
+                    <!-- Title -->
+
+                    <h4 class="card-title title-font">{{ $radio->title }}</h4>
+                </div>
+
             </div>
         </div>
+        <!-- Card -->
+    @endforeach
+    </div>
     </div>
 @endsection

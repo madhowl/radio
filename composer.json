@@ -23,7 +23,8 @@
         "infyomlabs/swagger-generator": "dev-master"
     },
     "require-dev": {
-        "barryvdh/laravel-ide-helper": "^2.6",
+        "barryvdh/laravel-debugbar": "^3.3",
+        "barryvdh/laravel-ide-helper": "^2.7",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
@@ -66,6 +67,11 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
         ]
     }
 }

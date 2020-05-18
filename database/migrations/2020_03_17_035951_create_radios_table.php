@@ -15,9 +15,9 @@ class CreateRadiosTable extends Migration
     {
         Schema::create('radios', function (Blueprint $table) {
             $table->bigInteger('id', true, true);
-            $table->string('title', 100);
-            $table->string('image', 100);
-            $table->text('description', 65535);
+            $table->string('title', 50);
+            $table->string('image', 500);
+            $table->text('description', 300);
             $table->string('link', 100);
             $table->unsignedBigInteger('categories_id');
             $table->foreign('categories_id')->references('id')->on('categories');

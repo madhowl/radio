@@ -16,22 +16,30 @@ Route::get('/', function () {
 });
 
 
-Route::get('/main', 'MainController@index1');
+Route::get('/main', 'MainController@radios')->name('main');
 
-Route::get('/genres', 'MainController@categories');
+Route::get('/genres', 'MainController@categories')->name('genres');
+
 Route::prefix('genres')->group(function (){
-    Route::get('/{id}', 'MainController@showRadiosFromGenre');
+    Route::get('/{id}', 'MainController@showRadiosFromGenre')->name('genres.id');
 });
 
-Route::get('/countries', 'MainController@countries');
+Route::get('/countries', 'MainController@countries')->name('countries');
+
 Route::prefix('countries')->group(function (){
-    Route::get('/{id}', 'MainController@showRadiosFromCountries');
+    Route::get('/{id}', 'MainController@showRadiosFromCountries')->name('countries.id');
 });
-//Route::get('/login', 'MainController@index4');
-Route::get('/register', 'MainController@index5');
-Route::get('/about', 'MainController@index6');
-Route::get('/contact', 'MainController@index7');
-//Route::get('/radio/{id}', 'MainController@showRadiosFromGenre');
+Route::prefix('radio')->group(function (){
+    Route::get('/{id}', 'MainController@radios_id')->name('radio.id');
+});
+
+Route::get('/login', 'MainController@login')->name('login');
+
+Route::get('/register', 'MainController@register')->name('register');
+
+Route::get('/about', 'MainController@about')->name('about');
+
+Route::get('/contact', 'MainController@contact')->name('contact');
 
 Auth::routes(['verify' => true]);
 

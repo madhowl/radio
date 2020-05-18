@@ -37,26 +37,31 @@ class MainController extends Controller
         $radios = Radio::where('countries_id', $id)->get();
         return view('countries.from-countries')->with('radios',$radios);
     }
-
-
-
-    public function index3(){
-        return view('./countries/russia');
+    public function radios()
+    {
+        $radios = Radio::all('id', 'title', 'image');
+        return view('main')->with('radios', $radios);
     }
 
-    public function index4(){
-        return view('./auth/login');
+    public function radios_id($id)
+    {
+        $radios = Radio::where( 'id', $id)->get();
+        return view('id-radio')->with('radios', $radios);
     }
 
-    public function index5(){
-        return view('./auth/register');
+    public function login(){
+        return view('auth.login');
     }
 
-    public function index6(){
+    public function register(){
+        return view('auth.register');
+    }
+
+    public function about(){
         return view('about');
     }
 
-    public function index7(){
+    public function contact(){
         return view('contact');
     }
 

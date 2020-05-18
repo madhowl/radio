@@ -24,7 +24,7 @@ class Radio extends Model
     use SoftDeletes;
 
     public $table = 'radios';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -85,5 +85,14 @@ class Radio extends Model
     public function countries()
     {
         return $this->belongsTo(\App\Models\Country::class, 'countries_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function radios_id()
+    {
+        return $this->belongsTo(\App\Models\Radio::class, 'id');
+
     }
 }

@@ -23,7 +23,7 @@
     <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-lg">
         <div class="container">
-        <a class="navbar-brand waves-effect" href="/main"><i class="fas fa-broadcast-tower"></i> Радио Онлайн</a>
+        <a class="navbar-brand waves-effect" href="{{ route('main') }}"><i class="fas fa-broadcast-tower"></i> Радио Онлайн</a>
         <button class="navbar-toggler waves-effect" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
                 aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fas fa-bars"></span>
@@ -31,30 +31,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link waves-effect" href="/main">Главная
+                    <a class="nav-link waves-effect" href="{{ route('main') }}">Главная
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect" href="/genres">Жанры
+                    <a class="nav-link waves-effect" href="{{ route('genres') }}">Жанры
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect" href="/countries">Страны
+                    <a class="nav-link waves-effect" href="{{ route('countries') }}">Страны
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect" href="/about">О нас</a>
+                    <a class="nav-link waves-effect" href="{{ route('about') }}">О нас</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect" href="/contact">Контакты</a>
+                    <a class="nav-link waves-effect" href="{{ route('contact') }}">Контакты</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item">
-                    <a class="nav-link waves-effect">
+                    <a class="nav-link waves-effect" href="https://vk.com/deathz_666">
                         <i class="fab fa-vk"></i>
                     </a>
                 </li>
@@ -65,12 +65,7 @@
     <!--/.Navbar -->
 </header>
 <hr>
-
-<div class="container">
-    <div class="row">
 @yield('content')
-    </div>
-</div>
 <div class="footer-down">
 <hr>
 <!-- Footer -->

@@ -1,1 +1,7 @@
-.audiojs { margin: auto; }
+.audiojs {
+    margin: auto;
+}
+
+.audiojs .play-pause {
+    width: 36px;
+}
