@@ -9,7 +9,7 @@
                 <th class="h3">Поиск по жанрам</th>
                 @foreach( $categories as $category)
                     <tr>
-                        <td><a class="h3" href="/countries/{{$category->id}}">{{$category->title}}</a></td>
+                        <td><a class="h3" href="/genres/{{$category->id}}">{{$category->title}}</a></td>
                     </tr>
                 @endforeach
             </table>

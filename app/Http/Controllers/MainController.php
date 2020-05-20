@@ -49,14 +49,6 @@ class MainController extends Controller
         return view('id-radio')->with('radios', $radios);
     }
 
-    public function login(){
-        return view('auth.login');
-    }
-
-    public function register(){
-        return view('auth.register');
-    }
-
     public function about(){
         return view('about');
     }

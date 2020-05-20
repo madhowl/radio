@@ -82,7 +82,7 @@
                             @endif
                         </div>
                         <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
-                        <a href="{{ url('/login') }}" class="text-center">I already have a membership</a>
+                        <a href="/login" class="text-center">I already have a membership</a>
                     </form>
                 </div>
             </div>

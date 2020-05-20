@@ -33,10 +33,6 @@ Route::prefix('radio')->group(function (){
     Route::get('/{id}', 'MainController@radios_id')->name('radio.id');
 });
 
-Route::get('/login', 'MainController@login')->name('login');
-
-Route::get('/register', 'MainController@register')->name('register');
-
 Route::get('/about', 'MainController@about')->name('about');
 
 Route::get('/contact', 'MainController@contact')->name('contact');
@@ -47,13 +43,12 @@ Route::get('admin', 'RadioController@index')->middleware('verified');
 
 Route::prefix('admin')->group(function () {
 
+    Route::get('/', 'RadioController@index');
 
-Route::get('/', 'RadioController@index');
+    Route::resource('radios', 'RadioController');
 
-Route::resource('radios', 'RadioController');
+    Route::resource('categories', 'CategoryController');
 
-Route::resource('categories', 'CategoryController');
-
-Route::resource('countries', 'CountryController');
+    Route::resource('countries', 'CountryController');
 });
 
