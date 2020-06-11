@@ -9,14 +9,14 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/RussoOne-Regular.ttf') }}">
     <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/bootstrap/mdb.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/audio.css') }}" media="screen" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/audio.css') }}" media="screen" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -66,19 +66,15 @@
 </header>
 <hr>
 @yield('content')
-<div class="footer-down">
-<hr>
 <!-- Footer -->
-<footer class="page-footer font-small white">
+<footer class="fixed-bottom row-fluid font-small white">
     <!-- Copyright -->
     <div class="txt-footer">
     <div class="text-center py-3">© 2020 Copyright: Максим Щедрин 1141
     </div>
     </div>
     <!-- Copyright -->
-
 </footer>
-</div>
 <!-- Footer -->
 {{--JS--}}
 <!-- JQuery -->
@@ -91,7 +87,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
 
 <script>var _gaq=[['_setAccount','UA-20257902-1'],['_trackPageview']];(function(d,t){ var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; g.async=1;g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
-<script src="/js/audio.min.js"></script>
+<script src="{{ asset('assets/js/audio.min.js') }}"></script>
 <script>
     audiojs.events.ready(function() {
         audiojs.createAll();

@@ -2,6 +2,10 @@ body {
     font-family: 'Russo One', sans-serif;
 }
 
+footer {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
 .nav-link {
     color: black;
 
@@ -24,10 +28,6 @@ body {
     font-size: 15px;
 }
 
-footer {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
 .navbar {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
@@ -36,25 +36,17 @@ footer {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.footer-down {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 87px;
-}
-
 .wow {
     visibility: hidden;
 }
 
 .card-body {
-  padding: 1px;
+    padding: 1px;
 }
 
 .card-title {
-  text-align: center;
-  padding-top: 10px;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .title-font {
